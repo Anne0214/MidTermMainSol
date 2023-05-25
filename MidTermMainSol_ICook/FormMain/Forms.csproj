@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F881788-8561-4822-A607-C5C07BEA813D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormMain</RootNamespace>
+    <AssemblyName>FormMain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Campaign\FormCampaignSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Campaign\FormCampaignSearch.Designer.cs">
+      <DependentUpon>FormCampaignSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INotify.cs" />
+    <Compile Include="Member\FormMemberSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\FormMemberSearch.Designer.cs">
+      <DependentUpon>FormMemberSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FormOrderSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FormOrderSearch.Designer.cs">
+      <DependentUpon>FormOrderSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FormProductSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FormProductSearch.Designer.cs">
+      <DependentUpon>FormProductSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\FormRecipeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recipe\FormRecipeSearch.Designer.cs">
+      <DependentUpon>FormRecipeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs" />
+    <Compile Include="LoginManagement.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginFail.Designer.cs">
+      <DependentUpon>FormLoginFailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginFailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ButtonNormal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ButtonNormal.Designer.cs">
+      <DependentUpon>ButtonNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ButtonImportant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ButtonImportant.Designer.cs">
+      <DependentUpon>ButtonImportant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Toast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Toast.Designer.cs">
+      <DependentUpon>Toast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\OrderVM.cs" />
+    <Compile Include="ViewModels\ProductDetailVM.cs" />
+    <Compile Include="ViewModels\ProductSearchVM.cs" />
+    <Compile Include="ViewModels\SkuVM.cs" />
+    <EmbeddedResource Include="Campaign\FormCampaignSearch.resx">
+      <DependentUpon>FormCampaignSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginFailed.resx">
+      <DependentUpon>FormLoginFailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\FormMemberSearch.resx">
+      <DependentUpon>FormMemberSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FormOrderSearch.resx">
+      <DependentUpon>FormOrderSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FormProductSearch.resx">
+      <DependentUpon>FormProductSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipe\FormRecipeSearch.resx">
+      <DependentUpon>FormRecipeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\ButtonNormal.resx">
+      <DependentUpon>ButtonNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ButtonImportant.resx">
+      <DependentUpon>ButtonImportant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Toast.resx">
+      <DependentUpon>Toast.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISpan2023.UCook.BackEnd\ISpan2023.UCook.BackEnd.csproj">
+      <Project>{B49E6CE7-9753-4D2B-9D04-E6C4118A0CDA}</Project>
+      <Name>ISpan2023.UCook.BackEnd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

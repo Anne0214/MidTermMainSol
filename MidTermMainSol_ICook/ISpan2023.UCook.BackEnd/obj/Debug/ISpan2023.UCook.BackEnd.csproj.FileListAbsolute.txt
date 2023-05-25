@@ -1,0 +1,6 @@
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\bin\Debug\ISpan2023.UCook.BackEnd.dll
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\bin\Debug\ISpan2023.UCook.BackEnd.pdb
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\obj\Debug\ISpan2023.UCook.BackEnd.csproj.AssemblyReference.cache
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\obj\Debug\ISpan2023.UCook.BackEnd.csproj.CoreCompileInputs.cache
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\obj\Debug\ISpan2023.UCook.BackEnd.dll
+D:\MidTermMainSol\MidTermMainSol_ICook\ISpan2023.UCook.BackEnd\obj\Debug\ISpan2023.UCook.BackEnd.pdb
