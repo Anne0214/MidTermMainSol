@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ado.Net.SqlDataLayer">
+      <HintPath>..\..\..\..\..\CMidTerm\Ado.Net.SqlDataLayer\Ado.Net.SqlDataLayer\bin\Debug\Ado.Net.SqlDataLayer.dll</HintPath>
+    </Reference>
     <Reference Include="ISpan2023.EStore.SqlDataLayer">
       <HintPath>.\ISpan2023.EStore.SqlDataLayer.dll</HintPath>
     </Reference>
