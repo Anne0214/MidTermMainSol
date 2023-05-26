@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISpan2023.UCook.BackEnd.Dtos
 {
-    public class SkuDto
+    public class SkuDto:IDto
     {
         public string Sku { get; set; }
         public string TypeName { get; set; }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FormMain
+namespace FormItem
 {
 	public partial class Toast : UserControl
 	{
@@ -30,26 +30,13 @@ namespace FormMain
         private void timer1_Tick(object sender, EventArgs e)
         {
 			this.Visible = true;
-			if (duration < 30)
-			{ //往下移動20
-                this.Top +=3;
-				duration++;
-			}
-			else if (duration >50 && duration<80)
-			{ //往上移動
-                this.Top -= 3;
-                duration++;
-            }
-			else if (duration>80)
-			{ //關閉
-                duration = 0;
+			duration++;
+			if(duration > 60)
+			{
+				duration = 0;
 				timer1.Enabled = false;
 				this.Visible = false;
 			}
-			else
-			{ //停留
-				duration++;
-			}	
         }
     }
 }

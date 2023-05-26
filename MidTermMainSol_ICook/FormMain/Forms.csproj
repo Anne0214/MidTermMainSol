@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Buttons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Buttons.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
@@ -50,37 +54,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campaign\FormCampaignSearch.cs">
+    <Compile Include="UserControls\FB_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FB_Table.designer.cs">
+      <DependentUpon>FB_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Campaign\FormCampaignSearch.Designer.cs">
-      <DependentUpon>FormCampaignSearch.cs</DependentUpon>
+    <Compile Include="FormEdit.Designer.cs">
+      <DependentUpon>FormEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormExportCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportCSV.Designer.cs">
+      <DependentUpon>FormExportCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IExportCSV.cs" />
+    <Compile Include="ImageUpload.cs" />
     <Compile Include="INotify.cs" />
-    <Compile Include="Member\FormMemberSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Member\FormMemberSearch.Designer.cs">
-      <DependentUpon>FormMemberSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Order\FormOrderSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Order\FormOrderSearch.Designer.cs">
-      <DependentUpon>FormOrderSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Product\FormProductSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product\FormProductSearch.Designer.cs">
-      <DependentUpon>FormProductSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Recipe\FormRecipeSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recipe\FormRecipeSearch.Designer.cs">
-      <DependentUpon>FormRecipeSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff.cs" />
     <Compile Include="LoginManagement.cs" />
     <Compile Include="FormLogin.cs">
@@ -103,30 +103,55 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\ButtonNormal.cs">
+    <Compile Include="UserControls\TextBoxCannotBeChanged.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ButtonNormal.Designer.cs">
-      <DependentUpon>ButtonNormal.cs</DependentUpon>
+    <Compile Include="UserControls\TextBoxCannotBeChanged.designer.cs">
+      <DependentUpon>TextBoxCannotBeChanged.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ButtonImportant.cs">
+    <Compile Include="UserControls\TextBoxCheckFormat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ButtonImportant.Designer.cs">
-      <DependentUpon>ButtonImportant.cs</DependentUpon>
+    <Compile Include="UserControls\TextBoxCheckFormat.designer.cs">
+      <DependentUpon>TextBoxCheckFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TextBoxEditable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TextBoxEditable.designer.cs">
+      <DependentUpon>TextBoxEditable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TextBoxMultiline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TextBoxMultiline.designer.cs">
+      <DependentUpon>TextBoxMultiline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TextBoxWordLimit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TextBoxWordLimit.designer.cs">
+      <DependentUpon>TextBoxWordLimit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Toast.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Toast.Designer.cs">
+    <Compile Include="UserControls\Toast.designer.cs">
       <DependentUpon>Toast.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MarketingVM.cs" />
     <Compile Include="ViewModels\OrderVM.cs" />
     <Compile Include="ViewModels\ProductDetailVM.cs" />
     <Compile Include="ViewModels\ProductSearchVM.cs" />
     <Compile Include="ViewModels\SkuVM.cs" />
-    <EmbeddedResource Include="Campaign\FormCampaignSearch.resx">
-      <DependentUpon>FormCampaignSearch.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\FB_Table.resx">
+      <DependentUpon>FB_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEdit.resx">
+      <DependentUpon>FormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportCSV.resx">
+      <DependentUpon>FormExportCSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -137,17 +162,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Member\FormMemberSearch.resx">
-      <DependentUpon>FormMemberSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Order\FormOrderSearch.resx">
-      <DependentUpon>FormOrderSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Product\FormProductSearch.resx">
-      <DependentUpon>FormProductSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recipe\FormRecipeSearch.resx">
-      <DependentUpon>FormRecipeSearch.cs</DependentUpon>
+    <EmbeddedResource Include="FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,11 +174,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\ButtonNormal.resx">
-      <DependentUpon>ButtonNormal.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\TextBoxCannotBeChanged.resx">
+      <DependentUpon>TextBoxCannotBeChanged.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ButtonImportant.resx">
-      <DependentUpon>ButtonImportant.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\TextBoxCheckFormat.resx">
+      <DependentUpon>TextBoxCheckFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TextBoxEditable.resx">
+      <DependentUpon>TextBoxEditable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TextBoxMultiline.resx">
+      <DependentUpon>TextBoxMultiline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TextBoxWordLimit.resx">
+      <DependentUpon>TextBoxWordLimit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Toast.resx">
       <DependentUpon>Toast.cs</DependentUpon>
@@ -187,5 +212,6 @@
       <Name>ISpan2023.UCook.BackEnd</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

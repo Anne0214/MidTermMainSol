@@ -31,37 +31,29 @@ namespace FormMain
 
         private void toolStripButtonMember_Click(object sender, EventArgs e)
         {//todo 避免重複開啟的程式碼
-            FormMemberSearch frm = new FormMemberSearch();
-            frm.MdiParent = this;
-            frm.Show();
+
         }
 
         private void toolStripButtonRecipe_Click(object sender, EventArgs e)
         {
-            FormRecipeSearch frm = new FormRecipeSearch();
+            FormSearch frm= new FormSearch();
             frm.MdiParent = this;
             frm.Show();
         }
 
         private void toolStripButtonProduct_Click(object sender, EventArgs e)
         {
-            FormProductSearch frm = new FormProductSearch();
-            frm.MdiParent = this;
-            frm.Show();
+
         }
 
         private void toolStripButtonOrder_Click(object sender, EventArgs e)
         {
-            FormOrderSearch frm = new FormOrderSearch();
-            frm.MdiParent = this;
-            frm.Show();
+
         }
 
         private void toolStripButtonAd_Click(object sender, EventArgs e)
         {
-            FormCampaignSearch frm = new FormCampaignSearch();
-            frm.MdiParent = this;
-            frm.Show();
+
         }
     }
 }

@@ -14,6 +14,7 @@ namespace FormMain
         [STAThread]
         static void Main()
         {
+            string[] args = new string[] { "早安", "人數", "午餐", "好喔" };
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
