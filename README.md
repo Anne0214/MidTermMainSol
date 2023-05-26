@@ -3,7 +3,8 @@
 <img width="226" alt="image" src="https://github.com/Anne0214/MidTermMainSol/assets/63950140/7deb282e-ed30-4870-876e-a411861cecd0">
 
 
-請從有0526數字的資料夾點進去，找到專案資料夾，進行改寫
+請從有0526數字的資料夾點進去，找到專案資料夾，進行改寫。
+文字請都用微軟正黑體12pt
 架構說明如下
 - Forms專案下放所有前端程式，包含Form、使用者自訂義控件、前端專用方法等等。請務必將你的前端相關程式放在裡面，並且使用簡單易懂的英文命名。
 - ISpan2023.UCook.BackEnd專案下請放所有資料層和服務層的程式，包含dto、assembler、repositories。如果你的dto沒有被放進去，請自行放入。
