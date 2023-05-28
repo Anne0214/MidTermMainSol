@@ -24,4 +24,16 @@
 - 如果你的Dto不在裡面，請自己放。
 - 想寫第二點但不知道寫神摸
 
+## 使用者控件
+- 文字框控件都有提供屬性讓大家改文字與規定字數(自己找是哪個屬性吧...我懶得打過來了，都是a開頭)
+- TextBoxCheckFormat提供一個方法CheckFormat，可以輸入文字檢查的委派，但我打錯了...不讓大家再下載更新了...想要用的人自己去改code
+`	public bool CheckFormat(Func<string,bool> FormatRule)
+	{
+	  bool isRight = FormatRule(textBox1.Text);
+	  label2.Visible = isRight ? false:true;
+	  panel1.Visible= isRight ? false : true;
+	  return isRight;
+	}
+    `
+
 祝大家Good luck!
